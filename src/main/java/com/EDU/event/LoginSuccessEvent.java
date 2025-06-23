@@ -1,6 +1,11 @@
 package com.EDU.event;
 
-public class LoginSuccessEvent {
-    public LoginSuccessEvent(String username, String password) {
+import com.EDU.entity.UserEntity;
+import org.springframework.context.ApplicationEvent;
+
+public class LoginSuccessEvent extends ApplicationEvent {
+    public LoginSuccessEvent  (UserEntity source) {
+        super(source);
+
     }
 }
